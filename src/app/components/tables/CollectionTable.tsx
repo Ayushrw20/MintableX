@@ -78,6 +78,7 @@ function CollectionTable() {
                             table.getRowModel().rows.map((row) => (
                                 <TableRow
                                     key={row.id}
+                                    className="cursor-pointer"
                                 >
                                     {row.getVisibleCells().map((cell, index) => (
                                         <TableCell key={index}>
