@@ -23,7 +23,7 @@ import {
 import { useState } from "react";
 import { columns } from "./collectionTableColumns";
 import { Collection } from "@/app/types";
-
+import { useRouter } from "next/navigation";
 
 function CollectionTable() {
     const [sorting, setSorting] = useState<SortingState>([]);
@@ -50,6 +50,12 @@ function CollectionTable() {
             rowSelection,
         },
     });
+
+    const router = useRouter();
+
+    const handleCollectionClick = () => {
+        router.replace("/collection");
+    }
 
     return (
         <div className="w-full">
@@ -79,6 +85,7 @@ function CollectionTable() {
                                 <TableRow
                                     key={row.id}
                                     className="cursor-pointer"
+                                    onClick={handleCollectionClick}
                                 >
                                     {row.getVisibleCells().map((cell, index) => (
                                         <TableCell key={index}>
