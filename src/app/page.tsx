@@ -3,7 +3,7 @@ import NftCarousel from "./components/carousel/NftCarousel";
 
 export default function Home() {
     return (
-        <div className="h-screen max-w-screen overflow-x-hidden">
+        <div className="max-w-screen overflow-x-hidden pt-16">
             <div className="w-full flex justify-center py-8">
                 <NftCarousel />
             </div>

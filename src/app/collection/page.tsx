@@ -6,7 +6,7 @@ import {
 
 export default function Collection() {
     return (
-        <div className="h-screen px-[3vw] py-5">
+        <div className="h-screen px-[3vw] py-5 pt-24">
             <div className="grid grid-cols-4 gap-5 place-items-center">
                 {
                     data.map((nft, index) => (
