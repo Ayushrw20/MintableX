@@ -2,26 +2,31 @@ import { Card, CardContent } from "@/components/ui/card";
 
 function Collection() {
     return (
-        <div className="flex justify-center gap-3 py-5">
-            {nftImages.map((nft, index) => (
-                <Card className="h-[40vh] w-[40vh] overflow-hidden cursor-pointer"
-                key={index}>
-                    <CardContent className="flex items-center justify-center h-full relative">
-                        <img
-                            src={nft.nftImage}
-                            className="h-full w-full object-cover
-                                hover:scale-110 transition duration-300 ease-in-out"
-                        />
-                        <div className="absolute textblack 
-                        px-2 bg-black/50 rounded-lg backdrop-blur-sm bottom-0 w-full">
-                            <h1 className="font-semibold text-xl text-center">
-                                {nft.nftName}
-                            </h1>
-                            <p className="text-center">{nft.price}</p>
-                        </div>
-                    </CardContent>
-                </Card>
-            ))}
+        <div className="relative py-2">
+            <h1 className="absolute text-2xl font-semibold">
+                Hello
+            </h1>
+            <div className="flex justify-center gap-3 py-5 pt-12">
+                {nftImages.map((nft, index) => (
+                    <Card className="h-[40vh] w-[40vh] overflow-hidden cursor-pointer"
+                    key={index}>
+                        <CardContent className="flex items-center justify-center h-full relative">
+                            <img
+                                src={nft.nftImage}
+                                className="h-full w-full object-cover
+                                    hover:scale-110 transition duration-300 ease-in-out"
+                            />
+                            <div className="absolute textblack 
+                            px-2 bg-black/50 rounded-lg backdrop-blur-sm bottom-0 w-full">
+                                <h1 className="font-semibold text-xl text-center">
+                                    {nft.nftName}
+                                </h1>
+                                <p className="text-center">{nft.price}</p>
+                            </div>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
         </div>
     )
 }

@@ -54,7 +54,7 @@ function CollectionTable() {
     const router = useRouter();
 
     const handleCollectionClick = () => {
-        router.replace("/collection");
+        router.replace("/collections");
     }
 
     return (
